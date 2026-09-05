@@ -4,7 +4,7 @@ Aplicação para conciliar duas bases financeiras com regras determinísticas, m
 
 > Regra central: **código concilia; IA não altera valores contábeis**. A camada de IA ficará restrita a sugestão de mapeamento e explicação de exceções em milestones posteriores.
 
-## MVP 0.3 — templates persistentes + matching 1:1, 1:N e N:1
+## MVP 0.3.1 — enterprise UI + templates persistentes + matching 1:1, 1:N e N:1
 
 ```text
 Base A (ERP / razão / recebíveis)
@@ -38,6 +38,21 @@ Base B (banco / adquirente / parceiro)
             ↓
         Exportação CSV
 ```
+
+## Atualização visual v0.3.1
+
+A interface foi redesenhada com uma linguagem mais empresarial para times financeiros, preservando o fluxo e todos os contratos da v0.3.0:
+
+- sidebar corporativa com navegação por módulo;
+- header operacional com status do motor determinístico;
+- stepper horizontal `Upload → Mapeamento → Regras e Templates → Resultado`;
+- cards de KPI compactos e orientados a operação;
+- resumo de valores das duas bases e diferença líquida;
+- tabela com descrição, cardinalidade, confiança visual e filtros;
+- busca por documento/descrição nos resultados;
+- navegação mobile dedicada;
+- fundo branco como padrão e dark mode opcional;
+- mesma API, templates, motor 1:1 / 1:N / N:1 e revisão humana.
 
 ## O que mudou na v0.3
 
