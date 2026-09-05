@@ -1,0 +1,23 @@
+services:
+  api:
+    build: ./backend
+    environment:
+      FRI_DB_PATH: /app/data/reconciliation.db
+      FRI_CORS_ORIGINS: http://localhost:3000
+    volumes:
+      - reconciliation_data:/app/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    ports:
+      - "3000:80"
+
+volumes:
+  reconciliation_data:
